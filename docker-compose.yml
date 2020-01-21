@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  redis:
+    build:
+      context: .
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis:/data
+    command: redis-server --protected-mode no
